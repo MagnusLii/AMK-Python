@@ -1,18 +1,23 @@
-numbers = ["","",""]
+numbers = []
+
+
 
 def getnumber():
-    for i in range(3):
-        while True:
-            number = input("Input number: ")
-            if number.isdigit():
-                numbers.append(number)
+    while True:
+        number = input("Input number: ")
+        if number.isdigit():
+            numbers.append(number)
+            return
 
-getnumber()
 
-for x in numbers:
-    print(x)
+for i in range(3):
+    getnumber()
 
-addition = ""
+num1 = numbers[0]
+num2 = ""
+num3 = ""
+
+addition = int(num1)+int(num1)
 multiplication = ""
 average = ""
 
