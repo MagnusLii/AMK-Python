@@ -1,0 +1,1 @@
+print("Hei, Magnus Liivamägi!")
