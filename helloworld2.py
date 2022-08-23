@@ -9,10 +9,10 @@ def H():
     left(90)
     forward(50)
     back(100)
+    right(90)
 
 def spacing():
     penup()
-    left(90)
     forward(20)
     pendown()
 
@@ -56,6 +56,7 @@ def O():
     forward(100)
     left(45)
     forward(25)
+    left(45)
 
 def W():
     left(90)
@@ -108,6 +109,9 @@ spacing()
 L()
 spacing()
 O()
+spacing()
+spacing()
+spacing()
 spacing()
 spacing()
 W()
