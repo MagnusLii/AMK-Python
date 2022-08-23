@@ -14,8 +14,8 @@ for i in range(3):
     getnumber()
 
 num1 = numbers[0]
-num2 = ""
-num3 = ""
+num2 = numbers[1]
+num3 = numbers[2]
 
 addition = int(num1)+int(num1)
 multiplication = ""
