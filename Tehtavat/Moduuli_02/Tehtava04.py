@@ -1,25 +1,29 @@
 numbers = []
 
-
-
 def getnumber():
-    while True:
-        number = input("Input number: ")
-        if number.isdigit():
-            numbers.append(number)
-            return
+    #print("getnum start")
+    try:
+        number = float(input("Input number: "))
+    except ValueError:
+        print("Enter a number!")
+        getnumber()
+    else:
+        #print("else")
+        numbers.append(number)
+        return
 
 
 for i in range(3):
+    #print("for loop")
     getnumber()
 
-num1 = numbers[0]
-num2 = numbers[1]
-num3 = numbers[2]
+num1 = float(numbers[0])
+num2 = float(numbers[1])
+num3 = float(numbers[2])
 
-addition = int(num1)+int(num1)
-multiplication = ""
-average = ""
+addition = num1+num2+num3
+multiplication = num1*num2*num3
+average = multiplication/3
 
 print(addition)
 print(multiplication)
