@@ -1,6 +1,6 @@
 import math
 
-radius = float(input("Anna ympyran sade: "))
+radius = float(input("Anna ympyran säde: "))
 area = radius**2*math.pi
 
 
