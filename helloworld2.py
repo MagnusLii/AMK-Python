@@ -116,6 +116,13 @@ O()
 spacing()
 R()
 spacing()
+L()
+spacing()
+D()
+
+
+hideturtle()
+done()
 
 
 
