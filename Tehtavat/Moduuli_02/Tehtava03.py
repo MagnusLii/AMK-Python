@@ -1,4 +1,3 @@
-#
 width = float(input("Syötä kannan pituus: "))
 height = float(input("Syötä korkeus: "))
 
