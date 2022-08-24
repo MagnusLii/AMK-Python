@@ -1,9 +1,9 @@
-import math
 
 # Var
 leiviskat = ""
 naulat = ""
 luodit = ""
+rounded_gram = 0
 
 # Functions used to weed out non numeric inputs from users.
 def step1():                                            # Function 1
