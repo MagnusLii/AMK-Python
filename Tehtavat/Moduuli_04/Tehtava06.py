@@ -37,8 +37,8 @@ for i in range(coord_maara):
         ind = ind + 1
         ympyran_sisalla = ympyran_sisalla + 1
     else:
-        ind = ind + 1
         ympyran_ulkopuolella = ympyran_ulkopuolella + 1
+        ind = ind + 1
 
 
 # Calculating pi
