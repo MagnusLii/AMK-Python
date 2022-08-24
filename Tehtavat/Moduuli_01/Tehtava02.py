@@ -1,1 +1,1 @@
-# Varmistin että voin puskea,tuoda ja committa
+# Varmistin että voin puskea,tuoda, ja committaa ¯\_(ツ)_/¯.
