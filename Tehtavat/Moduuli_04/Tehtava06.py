@@ -33,7 +33,7 @@ for i in range(coord_maara):
 
 # Evaluating positions.
 for i in range(coord_maara):
-    if xcoord[ind] ** 2 + ycoord[ind] ** 2 <= 1:
+    if (xcoord[ind] ** 2) + (ycoord[ind] ** 2) < 1:
         ind = ind + 1
         ympyran_sisalla = ympyran_sisalla + 1
     else:
@@ -49,6 +49,10 @@ except ZeroDivisionError:
     print("Kaikki pisteet osuivat ympyrän sisälle.")
 
 # Troubleshooting code.
+
+# Screening end results
+#print(ympyran_ulkopuolella)
+#print(ympyran_sisalla)
 
 # Testing lists.
 #for x in xcoord:
