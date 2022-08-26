@@ -2,6 +2,9 @@ import random
 
 
 # Var
+# potentially a better random num gen.
+#numlist =   [-1,-0.9,-0.8,-0.7,-0.6,-0.5,-0.4,-0.3,-0.2,-0.1,
+#            0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
 xcoord = []
 ycoord = []
 ind = 0
@@ -11,11 +14,12 @@ ympyran_ulkopuolella = 0
 
 
 
-# Functions
+# Functions random number gen.
 def randcoord():
-    xcoord.append(random.uniform(-1, 1))
+    xcoord.append(random.uniform(-1, 1))        # favours higher numbers from range.
     ycoord.append(random.uniform(-1, 1))
-
+    #xcoord.append(random.choice(numlist))       # prefers numbers from -0.5 to 0.5
+    #ycoord.append(random.choice(numlist))
 
 # Code
 # Number of coordinates generated.
@@ -44,7 +48,7 @@ for i in range(coord_maara):
 # Calculating pi
 try:
     pi_likiarvo = ympyran_sisalla / ympyran_ulkopuolella
-    print(pi_likiarvo)
+    print("pi-n likiarvo tämän ohjelman mielestään " +str(pi_likiarvo))
 except ZeroDivisionError:
     print("Kaikki pisteet osuivat ympyrän sisälle.")
 
