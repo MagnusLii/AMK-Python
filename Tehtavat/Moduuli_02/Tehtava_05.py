@@ -53,11 +53,9 @@ grams = 13.3 * (luodit + (32 * (naulat + (leiviskat * 20))))  # Variable that st
 
 if grams >= 999:
     rounded_gram = rounddown(grams)         # Creates a new variable that has the value of 'grams' rounded down to...
-    print(rounded_gram)                                          # nearest 1000. Used to store value of kilograms.
+                                            # nearest 1000. Used to store value of kilograms.
     grams = grams - (rounded_gram)          # Removes the grams moved into 'rounded_gram' from 'grams'
-    print(grams)
     rounded_gram = rounded_gram / 1000      # Converts grams into kilos within 'rounded grams' var
-    print(rounded_gram)
 
 
 
