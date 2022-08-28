@@ -1,4 +1,5 @@
 import random
+
 roll = None
 
 def dicethrow():
