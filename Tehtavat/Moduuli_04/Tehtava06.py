@@ -2,19 +2,18 @@ import random
 
 
 # Var
-xcoord = []
-ycoord = []
-ind = 0
-coord_maara = 0
-ympyran_sisalla = 0
-ympyran_ulkopuolella = 0
-
+xcoord = []                     # List for storing all X coordinates.
+ycoord = []                     # ^^ Same but for Y coords.
+ind = 0                         # Var for keeping track of which item were reading on the list.
+coord_maara = 0                 # Variable for storing the number of numbers asked to be generated.
+ympyran_sisalla = 0             # These two are variables used to keep track of the...
+ympyran_ulkopuolella = 0        # ratio of numbers within and outside the circle.
 
 
 # Functions
 def randcoord():
-    xcoord.append(random.uniform(-1, 1))
-    ycoord.append(random.uniform(-1, 1))
+    xcoord.append(round(random.uniform(-1, 1),1))
+    ycoord.append(round(random.uniform(-1, 1),1))
 
 
 # Code
