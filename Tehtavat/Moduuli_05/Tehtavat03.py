@@ -23,8 +23,8 @@ def primecheck(n):
 
 # For easily changing if the code keeps running after returning an answer.
 def exitmethod():
-    #exit()
-    numtocheck()
+    exit()
+    #numtocheck()
 
 
 # Asks for number and weeds out non integers.
