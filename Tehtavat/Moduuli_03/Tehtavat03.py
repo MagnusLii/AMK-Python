@@ -4,18 +4,18 @@ hemo = ""
 # Functions
 def mies():
     global hemo
-    if hemo <= 134:
+    if hemo < 134:
         print("Hemoglobiinisi on matala.")
-    elif hemo >= 195:
+    elif hemo > 195:
         print("Hemoglobiinisi on korkea.")
     else:
         print("Hemoglobiinisi on normaalia.")
 
 def nainen():
     global hemo
-    if hemo <= 117:
+    if hemo < 117:
         print("Hemoglobiinisi on matala.")
-    elif hemo >= 175:
+    elif hemo > 175:
         print("Hemoglobiinisi on korkea.")
     else:
         print("Hemoglobiinisi on normaalia.")
@@ -23,7 +23,7 @@ def nainen():
 # Code start
 # Sukupuoli kysely
 while True:
-    gender = input("Mikä on sukusi (mies/nainen)?: ")
+    gender = input("Mikä on sukupuolisi (mies/nainen)?: ")
     if gender.upper() in ["MIES","NAINEN"]:
         break
     else:
@@ -41,7 +41,7 @@ while True:
         break
 
 # Arvojen tarkistus
-if gender.upper() in ["MIES"]:
+if gender.upper() == "MIES":
     mies()
 else:
     nainen()
