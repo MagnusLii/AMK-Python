@@ -9,4 +9,3 @@ vuodenaika = ("Ei ole 0:tta kuukautta",
               "Syksy","Syksy","Talvi")
 #int(input("Anna kk numero: "))
 print(vuodenaika[int(input("Anna kk numero: "))])
-
