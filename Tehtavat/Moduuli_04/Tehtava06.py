@@ -1,54 +1,47 @@
 import random
 
-
 # Var
-xcoord = []                     # List for storing all X coordinates.
-ycoord = []                     # ^^ Same but for Y coords.
+xcoord = []                     # Lists for storing all X/Y coordinates.
+ycoord = []
 ind = 0                         # Var for keeping track of which item were reading on the list.
-coord_maara = 0                 # Variable for storing the number of numbers asked to be generated.
-ympyran_sisalla = 0             # These two are variables used to keep track of the...
-ympyran_ulkopuolella = 0        # ratio of numbers within and outside the circle.
-
+number_of_entries = 0                 # Variable for storing the number of numbers asked to be generated.
+inside_of_circle = 0             # These two are variables used to keep track of the...
+outside_of_circle = 0        # ratio of numbers within and outside the circle.
 
 # Functions
 def randcoord():
     xcoord.append(round(random.uniform(-1, 1),1))
     ycoord.append(round(random.uniform(-1, 1),1))
 
-
 # Code
 # Number of coordinates generated.
-while coord_maara == 0:
+while number_of_entries == 0:
     try:
-        coord_maara = int(input("Montakohan pistettä generoidaan?: "))
+        number_of_entries = int(input("Montakohan pistettä generoidaan?: "))
     except ValueError:
         print("Syötä kokonaisnumero.")
 
-
 # Generating coordinates.
-for i in range(coord_maara):
+for i in range(number_of_entries):
     randcoord()
 
-
 # Evaluating positions.
-for i in range(coord_maara):
+for i in range(number_of_entries):
     if (xcoord[ind] ** 2) + (ycoord[ind] ** 2) < 1:
         ind = ind + 1
-        ympyran_sisalla = ympyran_sisalla + 1
+        inside_of_circle = inside_of_circle + 1
     else:
-        ympyran_ulkopuolella = ympyran_ulkopuolella + 1
+        outside_of_circle = outside_of_circle + 1
         ind = ind + 1
-
 
 # Calculating pi
 try:
-    pi_likiarvo = ympyran_sisalla / ympyran_ulkopuolella
-    print(pi_likiarvo)
+    pi_approx = inside_of_circle / outside_of_circle
+    print(pi_approx)
 except ZeroDivisionError:
     print("Kaikki pisteet osuivat ympyrän sisälle.")
 
 # Troubleshooting code.
-
 # Screening end results
 #print(ympyran_ulkopuolella)
 #print(ympyran_sisalla)
