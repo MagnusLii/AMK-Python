@@ -1,5 +1,5 @@
 import math
-list = ["ekan", "toisen"]
+countlist = ["ekan", "toisen"]
 count = 0
 
 # biground = diameter, hunnie = price
@@ -8,17 +8,17 @@ def pizzaNamNamCalc(biground, hunnie):
 
 while count < 2:
     try:
-        priceperarea = pizzaNamNamCalc(float(input("Anna " +list[count] +" pizzan halkaisija senttimetreinä: ")),
-                                        float(input("Anna " +list[count] +" pizzan hinta: ")))
+        priceperarea = pizzaNamNamCalc(float(input("Anna " + countlist[count] + " pizzan halkaisija senttimetreinä: ")),
+                                       float(input("Anna " + countlist[count] + " pizzan hinta: ")))
         # Jos haluat tietää pizzan hinnan per neliömetri.
         #print("Pizzan hinta per neliömetri on " + str(round(priceperarea,2)) + "€.")
     except ValueError:
         print("Syötä numero!")
     else:
         if count == 0:
-            price1 = str(round(priceperarea,2))
+            price1 = str(round(priceperarea, 2))
         elif count == 1:
-            price2 = str(round(priceperarea,2))
+            price2 = str(round(priceperarea, 2))
         count = count + 1
 
 if price1 == price2:
