@@ -11,10 +11,10 @@ while True:
         break
 
 if year % 400 == 0:
-    print("Year " + str(year) + " is a leapyear")
+    print("The year " + str(year) + " is a leapyear")
 elif year % 100 == 0:
-    print("Year " + str(year) + " is not a leapyear")
+    print("The year " + str(year) + " is not a leapyear")
 elif year % 4 == 0:
-    print("Year " + str(year) + " is a leapyear")
+    print("The year " + str(year) + " is a leapyear")
 else:
-    print("Year " + str(year) + " is not a leapyear")
+    print("The year " + str(year) + " is not a leapyear")
