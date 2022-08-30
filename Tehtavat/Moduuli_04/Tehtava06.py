@@ -3,9 +3,6 @@ import random
 # Var
 xcoord = []                 # Lists for storing all X/Y coordinates.
 ycoord = []
-value = -1
-xvaluerecord = 0
-yvaluerecord = 0
 ind = 0                     # Var for keeping track of which item were reading on the list.
 number_of_entries = 0       # Variable for storing the number of numbers asked to be generated.
 inside_of_circle = 0        # These two are variables used to keep track of the...
@@ -13,8 +10,8 @@ outside_of_circle = 0       # ratio of numbers within and outside the circle.
 
 # Functions
 def randcoord():
-    xcoord.append(round(random.uniform(-1.0, 1.0),1))
-    ycoord.append(round(random.uniform(-1.0, 1.0),1))
+    xcoord.append(round(random.uniform(-1.001, 1.001),1))
+    ycoord.append(round(random.uniform(-1.001, 1.001),1))
 
 # Code
 # Number of coordinates generated.
@@ -44,23 +41,26 @@ try:
 except ZeroDivisionError:
     print("Kaikki pisteet osuivat ympyrän sisälle.")
 
-for i in range(21):
-    for i in range(number_of_entries):
-        if xcoord[i] == round(value,1):
-            xvaluerecord = xvaluerecord + 1
-        if ycoord[i] == round(value,):
-            yvaluerecord = yvaluerecord + 1
-    print("x" + str(value) + " " +str(xvaluerecord))
-    print("y" + str(value) + " " + str(yvaluerecord))
-    value = value + 0.1
-    xvaluerecord = 0
-    yvaluerecord = 0
-
-
-
-
-
 # Troubleshooting code.
+
+# value = -1
+# xvaluerecord = 0
+# yvaluerecord = 0
+# totalvalues = 0
+# for l in range(21):
+#     for i in range(number_of_entries):
+#         if xcoord[i] == round(value, 1):
+#             xvaluerecord = xvaluerecord + 1
+#         if ycoord[i] == round(value, 1):
+#             yvaluerecord = yvaluerecord + 1
+#     print("x" + str(value) + " " +str(xvaluerecord))
+#     print("y" + str(value) + " " + str(yvaluerecord))
+#     value = round(value, 1) + 0.1
+#     totalvalues += xvaluerecord + yvaluerecord
+#     xvaluerecord = 0
+#     yvaluerecord = 0
+#print(totalvalues)
+
 # Screening end results
 # print(ympyran_ulkopuolella)
 # print(ympyran_sisalla)
