@@ -43,11 +43,11 @@ except ZeroDivisionError:
 
 # Troubleshooting code.
 # Screening end results
-#print(ympyran_ulkopuolella)
-#print(ympyran_sisalla)
-
+# print(ympyran_ulkopuolella)
+# print(ympyran_sisalla)
+#
 # Testing lists.
-#for x in xcoord:
+# for x in xcoord:
 #    print("X coord" + str(xcoord[ind]),end="")
 #    print("Y coord" + str(ycoord[ind]))
 #    ind = ind + 1
