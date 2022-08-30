@@ -2,8 +2,6 @@
 username = "python"
 password = "rules"
 guesses = 0
-username_guess = None
-password_guess = None
 
 # Functions
 def logincred():
@@ -16,7 +14,7 @@ while True:
     #print("guesses arvo" +str(guesses))    # For troubleshoot.
     if guesses == 5:
         print("Pääsy estetty")
-        exit(1)
+        exit()
     elif password != password_guess:
         guesses = guesses + 1
         logincred()
@@ -25,4 +23,4 @@ while True:
         logincred()
     else:
         print("Tervetuloa!")
-        exit(2)
+        exit()
