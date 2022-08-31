@@ -24,11 +24,11 @@ for i in range(number_of_entries):
 # Evaluating positions.
 for i in range(number_of_entries):
     if (xcoord[ind] ** 2) + (ycoord[ind] ** 2) < 1:
-        inside_of_circle = inside_of_circle + 1
-        ind = ind + 1
+        inside_of_circle += 1
+        ind += 1
     else:
-        outside_of_circle = outside_of_circle + 1
-        ind = ind + 1
+        outside_of_circle += 1
+        ind += 1
 
 # Calculating pi
 try:
