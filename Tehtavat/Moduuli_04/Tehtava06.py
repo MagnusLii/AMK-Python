@@ -21,7 +21,4 @@ for i in range(number_of_entries):
         ind += 1
 
 # Calculating pi
-try:
-    print(4*inside_of_circle / number_of_entries)
-except ZeroDivisionError:
-    print("Kaikki pisteet osuivat ympyrän sisälle.")
+print(4*inside_of_circle / number_of_entries)
