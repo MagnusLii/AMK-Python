@@ -12,12 +12,16 @@ while True:
             break
         user_input = float(user_input)
     except ValueError:
-            print("Käytä numeroita!")
+        print("Käytä numeroita!")
     else:
         user_numbers.append(user_input)
 
 
 # Organizing and printing biggest numbers.
 user_numbers.sort(reverse=True)
+
 for i in range(5):
-    print(user_numbers[i])
+    try:
+        print(user_numbers[i])
+    except IndexError:
+        continue
