@@ -1,12 +1,14 @@
 
 full_list = []
 
-def removenum(list):
+
+def removenum(numlist):
     templist = []
-    for i in list:
-        if i%2 == 0:
-            templist.append(i)
+    for j in numlist:
+        if j % 2 == 0:
+            templist.append(j)
     return templist
+
 
 while True:
     try:
@@ -17,8 +19,8 @@ while True:
                 print(i, end=" ")
             print()
             data = removenum(full_list)
-            for i in data:
-                print(i, end=" ")
+            for k in data:
+                print(k, end=" ")
             exit()
         else:
             nro = int(nro)
