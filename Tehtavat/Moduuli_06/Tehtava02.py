@@ -2,6 +2,12 @@ import random
 
 roll = None
 
+
+def dicethrow(maxroll):
+    global roll
+    roll = random.randint(1, maxroll)
+
+
 while True:
     try:
         dice = int(input("Nopan tahkojen määrä: "))
@@ -11,7 +17,7 @@ while True:
         break
 
 while roll != dice:
-    roll = random.randint(1, dice)
+    dicethrow(dice)
     print(roll)
     if roll == dice:
         exit()
