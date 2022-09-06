@@ -14,12 +14,7 @@ while dice_amount == 0:
 
 # Loop to generate dicerolls.
 for x in range(dice_amount):
-    rolls.append(random.randint(1,6))
-
+    rolls.append(random.randint(1, 6))
 
 sum_value = sum(rolls)
 print(sum_value)
-
-
-
-
