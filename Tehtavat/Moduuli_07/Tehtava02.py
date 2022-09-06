@@ -1,7 +1,7 @@
 
 namelist = []
 
-print("""Syötä "exit" kun olet syöttänyt kaikki numerot saadaksesi summa.""")
+print("""Syötä "exit" kun olet syöttänyt kaikki halumasi nimet.""")
 
 while True:
     newname = input("give me 'da names ya stupid 'umie!: ")
