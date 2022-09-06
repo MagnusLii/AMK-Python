@@ -1,8 +1,10 @@
 
 numbers = []
 
-def summachine(list):
-    return sum(list)
+
+def summachine(numlist):
+    return sum(numlist)
+
 
 print("""Syötä "exit" kun olet syöttänyt kaikki numerot saadaksesi summa.""")
 
