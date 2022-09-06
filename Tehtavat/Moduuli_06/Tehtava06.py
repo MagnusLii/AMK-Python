@@ -2,9 +2,11 @@ import math
 countlist = ["ekan", "toisen"]
 count = 0
 
+
 # biground = diameter, hunnie = price
 def pizzaNamNamCalc(biground, hunnie):
     return hunnie/(math.pi*((biground/2)**2))
+
 
 while count < 2:
     try:
