@@ -16,19 +16,19 @@ def pizza_hinta_per_square_meter(fdiameter, fprice):
 
 
 while count < 2:
-    for i in range(1):
-        price = float(input(f"Anna {i + 1} pizzan hinta: "))
-        diameter = float(input(f"Anna {i + 1} pizzan halkaisija: "))
-        try:
-            priceperarea = pizza_hinta_per_square_meter(diameter, price)
-        except ValueError:
-            print("Syötä numero!")
-        else:
-            if count == 0:
-                price1 = str(round(priceperarea, 2))
-            elif count == 1:
-                price2 = str(round(priceperarea, 2))
-            count = count + 1
+    i = 0
+    price = float(input(f"Anna {i + 1} pizzan hinta: "))
+    diameter = float(input(f"Anna {i + 1} pizzan halkaisija: "))
+    try:
+        priceperarea = pizza_hinta_per_square_meter(diameter, price)
+    except ValueError:
+        print("Syötä numero!")
+    else:
+        if count == 0:
+            price1 = str(round(priceperarea, 2))
+        elif count == 1:
+            price2 = str(round(priceperarea, 2))
+        count = count + 1
 
 if price1 == price2:
     print(f"Molemilla pizzoilla on sama hinta per bite. Hinta on {price1}€.")
