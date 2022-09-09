@@ -12,7 +12,7 @@ count = 0
 i = 1
 
 
-def pizza_hinta_per_square_meter(fdiameter, fprice):
+def pizzahinta(fdiameter, fprice):
     return fprice / (math.pi * 2 * math.pow(fdiameter/2, 2))
 
 
@@ -21,11 +21,11 @@ while count < 2:
     diameter = float(input(f"Anna {i} pizzan halkaisija: "))
     i += 1
     try:
-        priceperarea = pizza_hinta_per_square_meter(diameter, price)
+        priceperarea = pizzahinta(diameter, price)
     except ValueError:
         print("Syötä numero!")
     else:
-        print(f"Pizzan hinta per neliömetri on {round(pizza_hinta_per_square_meter(diameter, price), 2)}€.")
+        print(f"Pizzan hinta per neliömetri on {round(pizzahinta(diameter, price), 2)}€.")
         if count == 0:
             price1 = round(priceperarea, 2)
         elif count == 1:
@@ -33,8 +33,8 @@ while count < 2:
         count += 1
 
 if price1 == price2:
-    print(f"Molemilla pizzoilla on sama hinta per bite.")
+    print("Molemilla pizzoilla on sama hinta per bite.")
 elif price1 < price2:
-    print(f"Ekalla pizzalla on parempi hinta.")
+    print("Ekalla pizzalla on parempi hinta.")
 else:
-    print(f"Toisella pizzalla on parempi hinta.")
+    print("Toisella pizzalla on parempi hinta.")
