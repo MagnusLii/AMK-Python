@@ -9,6 +9,7 @@ import math
 
 countlist = ["ekan", "toisen"]
 count = 0
+i = 1
 
 
 def pizza_hinta_per_square_meter(fdiameter, fprice):
@@ -16,9 +17,8 @@ def pizza_hinta_per_square_meter(fdiameter, fprice):
 
 
 while count < 2:
-    i = 0
-    price = float(input(f"Anna {i + 1} pizzan hinta: "))
-    diameter = float(input(f"Anna {i + 1} pizzan halkaisija: "))
+    price = float(input(f"Anna {i} pizzan hinta: "))
+    diameter = float(input(f"Anna {i} pizzan halkaisija: "))
     i += 1
     try:
         priceperarea = pizza_hinta_per_square_meter(diameter, price)
@@ -30,7 +30,7 @@ while count < 2:
             price1 = round(priceperarea, 2)
         elif count == 1:
             price2 = round(priceperarea, 2)
-        count = count + 1
+        count += 1
 
 if price1 == price2:
     print(f"Molemilla pizzoilla on sama hinta per bite.")
