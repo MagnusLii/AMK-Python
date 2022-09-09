@@ -11,8 +11,8 @@ countlist = ["ekan", "toisen"]
 count = 0
 
 
-def pizza_hinta_per_square_meter(diameter, price):
-    return price / (math.pi * 2 * math.pow(diameter/2, 2))
+def pizza_hinta_per_square_meter(fdiameter, fprice):
+    return fprice / (math.pi * 2 * math.pow(fdiameter/2, 2))
 
 
 while count < 2:
