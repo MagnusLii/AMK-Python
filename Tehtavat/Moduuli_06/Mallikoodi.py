@@ -7,6 +7,7 @@
 
 import math
 
+countlist = ["ekan", "toisen"]
 count = 0
 i = 1
 
