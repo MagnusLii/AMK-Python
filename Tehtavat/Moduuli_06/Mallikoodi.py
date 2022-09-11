@@ -6,29 +6,28 @@
 # Yksikköhintojen laskennassa on hyödynnettävä kirjoitettua funktiota.
 
 import math
-
-countlist = ["ekan", "toisen"]
+meemit = ["ovat", "tärkeitä"]
 count = 0
 i = 1
 
 
 def pizzahinta(fdiameter, fprice):
-    return fprice / (math.pi * 2 * math.pow(fdiameter/2, 2))
+    return fprice / (math.pi * fdiameter)
 
 
 while count < 2:
-    price = float(input(f"Anna {i} pizzan hinta: "))
-    diameter = float(input(f"Anna {i} pizzan halkaisija: "))
-    i += 1
     try:
+        price = float(input(f"Anna {i} pizzan hinta: "))
+        diameter = float(input(f"Anna {i} pizzan halkaisija: "))
         priceperarea = pizzahinta(diameter, price)
     except ValueError:
         print("Syötä numero!")
     else:
         print(f"Pizzan hinta per neliömetri on {round(pizzahinta(diameter, price), 2)}€.")
-        if count == 0:
+        if i == 0:
             price1 = round(priceperarea, 2)
-        elif count == 1:
+            i += 1
+        elif i == 1:
             price2 = round(priceperarea, 2)
         count += 1
 
