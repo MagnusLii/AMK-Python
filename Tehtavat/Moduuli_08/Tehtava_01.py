@@ -3,7 +3,7 @@
 # Löytyy myös tästä AO linkistään.
 # https://github.com/MagnusLii/ohjelmisto1/blob/master/Tehtavat/Moduuli_08/SQLfunctions.py
 
-import SQLfunctions
+from SQLfunctions import sqlconnect
 
 
 def getICAOinf(icao):
@@ -11,7 +11,7 @@ def getICAOinf(icao):
       FROM airport
       WHERE ident = "{icao}"'''
     #print(sql)
-    cursor = SQLfunctions.sqlconnect.cursor()
+    cursor = sqlconnect.cursor()
     cursor.execute(sql)
     outcome = cursor.fetchall()
     return outcome
