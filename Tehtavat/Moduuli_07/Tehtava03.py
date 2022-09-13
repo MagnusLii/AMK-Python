@@ -1,5 +1,5 @@
-terminal_ICAO = ["AYMN", "AGLM", "EFHK"]
-terminal_names = ["AYMN", "Lomlom Airport", "Helsinki-Vantaa airport"]
+terminal_ICAO = []
+terminal_names = []
 
 
 def exit1():
