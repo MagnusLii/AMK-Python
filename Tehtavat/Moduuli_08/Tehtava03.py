@@ -44,4 +44,4 @@ for i in coords:
 #print(coords[1])
 #print(coords)
 #print(GD((-6.14774, 143.656998), (60.3172, 24.963301)))
-print(f"The distance between the specified airports is {GD(coords[0], coords[1])}")
+print(f"The distance between the specified airports is {geopy.distance.geodesic(coords[0], coords[1])}")
