@@ -9,11 +9,11 @@ while True:
     if path == 1:
         exit()
     elif path == 2:
-        terminal.update({input("Anna lentoaseman ICAO koodi: "):
+        terminal.update({input("Anna lentoaseman ICAO koodi: ").upper():
                          input("Anna lentoaseman nimi: ")})
     elif path == 3:
         try:
-            print(terminal[input("Anna haettavan lentoaseman ICAO koodi: ")])
+            print(terminal[input("Anna haettavan lentoaseman ICAO koodi: ").upper()])
         except KeyError:
             print("404\n"
                   "You're searching beyond the knowledge of this dictionary.")
