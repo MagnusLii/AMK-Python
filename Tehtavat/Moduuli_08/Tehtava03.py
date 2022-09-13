@@ -15,6 +15,7 @@ def getcoords(ICAO):
         FROM airport WHERE ident = "{ICAO}"'''
     return cursor(query)
 
+
 for i in range(2):
     userinp = (input(f"Give ICAO{i+1}: ").upper())
     coords.append(getcoords(userinp))
