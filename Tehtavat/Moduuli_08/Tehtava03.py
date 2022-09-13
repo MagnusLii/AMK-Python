@@ -4,15 +4,14 @@
 # https://github.com/MagnusLii/ohjelmisto1/blob/master/Tehtavat/Moduuli_08/SQLfunctions.py
 
 import geopy.distance
+from SQLfunctions import cursor
 
 coords = []
 
-from SQLfunctions import cursor
 
-
-def getcoords(ICAO):
+def getcoords(icao):
     query = f'''SELECT latitude_deg, longitude_deg 
-        FROM airport WHERE ident = "{ICAO}"'''
+        FROM airport WHERE ident = "{icao}"'''
     return cursor(query)
 
 
