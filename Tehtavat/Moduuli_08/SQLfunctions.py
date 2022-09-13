@@ -1,4 +1,6 @@
 
+import mysql.connector
+
 sqlconnect = mysql.connector.connect(
     host="localhost",
     port="3306",
