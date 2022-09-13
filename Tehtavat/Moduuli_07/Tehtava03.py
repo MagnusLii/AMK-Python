@@ -1,16 +1,5 @@
 
-# TODO: redo lists.
 terminal = {} # icao : name
-
-
-def addterminal(name, icao):
-    terminal.update({icao.upper():name})
-
-
-def fetch(icao):
-    print(icao)
-    print(terminal[icao])
-
 
 while True:
     path = int(input("Input 1 to exit.\n"
