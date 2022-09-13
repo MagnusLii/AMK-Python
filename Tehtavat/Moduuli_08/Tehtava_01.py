@@ -10,7 +10,7 @@ def getICAOinf(icao):
     cursor = SQLfunctions.sqlconnect.cursor()
     cursor.execute(sql)
     outcome = cursor.fetchall()
-    print(outcome)
+    return outcome
 
 
 print(getICAOinf(input("Anna ICAO: ".upper())))
