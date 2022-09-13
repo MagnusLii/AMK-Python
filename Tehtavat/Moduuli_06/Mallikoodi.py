@@ -8,7 +8,7 @@
 import math
 meemit = ["ovat", "tärkeitä"]
 count = 0
-i = 1
+i = 0
 
 
 def pizzahinta(fdiameter, fprice):
@@ -17,8 +17,8 @@ def pizzahinta(fdiameter, fprice):
 
 while count < 2:
     try:
-        price = float(input(f"Anna {i} pizzan hinta: "))
-        diameter = float(input(f"Anna {i} pizzan halkaisija: "))
+        price = float(input(f"Anna {i+1} pizzan hinta: "))
+        diameter = float(input(f"Anna {i+1} pizzan halkaisija: "))
         priceperarea = pizzahinta(diameter, price)
     except ValueError:
         print("Syötä numero!")
