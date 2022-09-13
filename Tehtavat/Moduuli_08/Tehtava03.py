@@ -5,3 +5,10 @@
 
 from SQLfunctions import sqlconnect
 
+def getcoords(ICAO):
+    query = f'''SELECT latitude_deg, longitude_deg 
+        FROM airport WHERE ident = "{ICAO}"'''
+
+icao1 = input("Give ICAO1: ").upper()
+icao2 = input("Give ICAO2: ").upper()
+
