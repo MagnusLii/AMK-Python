@@ -15,6 +15,10 @@ def getairporttype(country):
     cursor = sqlconnect.cursor()
     cursor.execute(query)
     outcome = cursor.fetchall()
-    return outcome
+    if cursor.rowcount > 0:
+        return outcome
+    else:
+        print("Incorrect input.")
+        exit()
 
 print(getairporttype(input("Anna maan koodi: ".upper())))
