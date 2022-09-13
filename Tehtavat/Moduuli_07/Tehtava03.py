@@ -1,3 +1,5 @@
+
+# TODO: redo lists.
 terminal_ICAO = []
 terminal_names = []
 
