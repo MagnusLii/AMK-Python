@@ -20,4 +20,4 @@ def getICAOinf(icao):
     outcome = cursor.fetchall()
     print(outcome)
 
-getICAOinf(input("Anna ICAO: ").upper())
+print(getICAOinf(input("Anna ICAO: ".upper())))
