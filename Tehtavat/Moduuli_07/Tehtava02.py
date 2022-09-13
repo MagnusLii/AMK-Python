@@ -1,5 +1,5 @@
 
-namelist = []
+namelist = set()
 
 print("""Syötä "exit" kun olet syöttänyt kaikki halumasi nimet.""")
 
@@ -7,11 +7,11 @@ while True:
     newname = input("give me 'da names ya stupid 'umie!: ")
     if newname in namelist:
         print("Aiemmin syötetty nimi.")
-    elif newname.lower() == "exit":
+    elif newname.lower() == "":
         break
     else:
         print("Uusi nimi")
-    namelist.append(newname)
+    namelist.add(newname)
 
 print("---Nimet listassa---")
 for j in namelist:
