@@ -7,6 +7,7 @@ while True:
                     "Input 3 to fetch existing airport.\n"
                     "Input: "))
     if path == 1:
+        print("It’s going to be hard finding a replacement for you...")
         exit()
     elif path == 2:
         terminal.update({input("Anna lentoaseman ICAO koodi: ").upper():
