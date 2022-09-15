@@ -1,8 +1,6 @@
 
 namelist = set()
 
-print("""Syötä "exit" kun olet syöttänyt kaikki halumasi nimet.""")
-
 while True:
     newname = input("give me 'da names ya stupid 'umie!: ")
     if newname in namelist:
