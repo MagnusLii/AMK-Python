@@ -5,8 +5,8 @@ sqlconnect = mysql.connector.connect(
     host="localhost",
     port="3306",
     database="flight_game1",
-    user="root",
-    password="5579",
+    user="pyth",
+    password="1337",
     autocommit=True
 )
 
