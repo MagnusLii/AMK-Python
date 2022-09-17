@@ -31,5 +31,4 @@ for i in range(2):
     userinp = (input(f"Give ICAO{i+1}: ").upper())
     coords.append(getcoords(userinp))
 
-print(coords)
 print(f"The distance between the specified airports is {geopy.distance.geodesic(coords[0], coords[1])}")
