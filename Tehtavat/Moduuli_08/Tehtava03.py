@@ -8,7 +8,6 @@ from SQLfunctions import cursor
 
 coords = []
 
-
 def getcoords(icao):
     query = f'''SELECT latitude_deg, longitude_deg 
         FROM airport WHERE ident = "{icao}"'''
@@ -19,14 +18,5 @@ for i in range(2):
     userinp = (input(f"Give ICAO{i+1}: ").upper())
     coords.append(getcoords(userinp))
 
-x = 0
-for i in coords:
-    item = coords[x]
-    removelist = "[]()"
-    for removelist in removelist:
-        item = str(item)
-        item = item.replace(removelist, "")
-    coords[x] = item
-    x += 1
-
+print(coords)
 print(f"The distance between the specified airports is {geopy.distance.geodesic(coords[0], coords[1])}")
