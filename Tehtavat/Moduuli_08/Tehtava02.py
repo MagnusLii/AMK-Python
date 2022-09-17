@@ -1,9 +1,22 @@
 
-# Ohjelma hyödyntää komentoja/asetuksia Moduuli8/SQLfunctions.py tiedostostaan.
-# Löytyy myös tästä AO linkistään.
-# https://github.com/MagnusLii/ohjelmisto1/blob/master/Tehtavat/Moduuli_08/SQLfunctions.py
+import mysql.connector
 
-from SQLfunctions import sqlconnect
+sqlconnect = mysql.connector.connect(
+    host="localhost",
+    port="3306",
+    database="flight_game1",
+    user="pyth",
+    password="1337",
+    autocommit=True
+)
+
+
+def cursor(input):
+    cursor = sqlconnect.cursor()
+    cursor.execute(input)
+    outcome = cursor.fetchall()
+    return outcome
+
 
 def getairporttype(country):
     query = f'''SELECT type, COUNT(type)
