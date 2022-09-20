@@ -19,9 +19,9 @@ car1 = Car("ABC-420", 69)
 problems_between_chair_and_keyboard = 0
 
 try:
-    car1.kiihdyta(input("Nopeus muutos: "))
+    car1.kiihdyta(input("Nopeuden muutos: "))
 except ValueError:
     problems_between_chair_and_keyboard += 1
 
 attributes = vars(car1)
-print(", ".join("%s: %s" % item for item in attributes.items()))
+print("\n".join("%s: %s" % item for item in attributes.items()))
