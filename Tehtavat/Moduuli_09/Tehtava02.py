@@ -16,7 +16,7 @@ class Car:
 
 car1 = Car("ABC-420", 69)
 
-problems_between_chair_and_keyboard = 0
+problems_between_chair_and_keyboard = 0  # Keeps track of user errors.
 
 try:
     car1.kiihdyta(input("Nopeuden muutos: "))
