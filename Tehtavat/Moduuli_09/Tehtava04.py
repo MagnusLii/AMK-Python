@@ -26,14 +26,14 @@ cars = []
 for i in range(10):
     cars.append(Car(f"ABC-{i}", random.randint(100, 201)))
 
-someonenotwon = True
-while someonenotwon:
+someonewon = False
+while not someonewon:
     for car in cars:
         car.kiihdyta(random.randint(-10, +15))
         car.travel(1)
         if car.distance_traveled > 10000:
             print(f"{car.registration_number} has won the race, the race lasted {hourofrace} hours.")
-            someonenotwon = False
+            someonewon = True
     hourofrace += 1
 
 for i in cars:
