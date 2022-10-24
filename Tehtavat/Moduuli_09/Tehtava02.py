@@ -18,12 +18,10 @@ car1 = Car("ABC-420", 69)
 
 problems_between_chair_and_keyboard = 0  # Keeps track of user errors.
 
-while True:
-    try:
-        car1.kiihdyta(input("Nopeuden muutos: "))
-        break
-    except ValueError:
-        problems_between_chair_and_keyboard += 1
-
-attributes = vars(car1)
-print("\n".join("%s: %s" % item for item in attributes.items()))
+car1.kiihdyta(30)
+car1.kiihdyta(70)
+car1.kiihdyta(50)
+print(f"Current speed is {car1.current_speed}")
+car1.kiihdyta(-250)
+print("\n**tire screeches**\nOH NOE YOU CRASHED!!!!\nWEE-OOOO WEEEE--OOOOO (police sirens)\n")
+print(f"Current speed is {car1.current_speed}")
