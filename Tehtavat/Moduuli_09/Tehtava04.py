@@ -26,11 +26,16 @@ cars = []
 for i in range(10):
     cars.append(Car(f"ABC-{i}", random.randint(100, 201)))
 
-while True:
+someonenotwon = True
+while someonenotwon:
     for car in cars:
         car.kiihdyta(random.randint(-10, +15))
         car.travel(1)
         if car.distance_traveled > 10000:
-            print(f"{car} has won the race, the race lasted {hourofrace} hours.")
-            exit()
+            print(f"{car.registration_number} has won the race, the race lasted {hourofrace} hours.")
+            someonenotwon = False
     hourofrace += 1
+
+for i in cars:
+    attributes = vars(i)
+    print(", ".join("%s: %s" % item for item in attributes.items()))
