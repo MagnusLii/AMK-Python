@@ -24,7 +24,7 @@ class Car:
 
 cars = []
 for i in range(10):
-    cars.append(Car(f"ABC-{i}", random.randint(100, 201)))
+    cars.append(Car(f"ABC-{i+1}", random.randint(100, 200)))
 
 someonewon = False
 while not someonewon:
