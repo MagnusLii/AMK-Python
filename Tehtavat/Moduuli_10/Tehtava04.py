@@ -55,7 +55,7 @@ someonewon = None
 while not someonewon:
     for hours in range(10):
         comp.hourpasses()
-        for car in cars:
+        for car in comp.carlist:
             someonewon = comp.raceover(car)
             if someonewon:
                 comp.printsit()
