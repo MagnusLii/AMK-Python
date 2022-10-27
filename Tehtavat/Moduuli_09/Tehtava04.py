@@ -11,7 +11,7 @@ class Car:
         self.current_speedkmh = 0
         self.distance_traveled = 0
 
-    def kiihdyta(self, speedchange):
+    def speedup(self, speedchange):
         self.current_speedkmh += int(speedchange)
         if self.current_speedkmh < 0:
             self.current_speedkmh = 0
@@ -29,7 +29,7 @@ for i in range(10):
 someonewon = False
 while not someonewon:
     for car in cars:
-        car.kiihdyta(random.randint(-10, 15))
+        car.speedup(random.randint(-10, 15))
         car.travel(1)
         if car.distance_traveled >= 10000:
             print(f"{car.registration_number} has won the race, the race lasted {hourofrace} hours.")

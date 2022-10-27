@@ -8,7 +8,7 @@ class Car:
         self.current_speedkmh = 0
         self.distance_traveled = 0
 
-    def kiihdyta(self, speedchange):
+    def speedup(self, speedchange):
         self.current_speedkmh += int(speedchange)
         if self.current_speedkmh < 0:
             self.current_speedkmh = 0
@@ -27,7 +27,7 @@ car1.current_speedkmh = 60
 problems_between_chair_and_keyboard = 0  # Keeps track of user errors.
 
 try:
-    car1.kiihdyta(input("Nopeuden muutos: "))
+    car1.speedup(input("Nopeuden muutos: "))
 except ValueError:
     problems_between_chair_and_keyboard += 1
 

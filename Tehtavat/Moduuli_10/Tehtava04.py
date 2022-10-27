@@ -11,7 +11,7 @@ class Car:
         self.current_speedkmh = 0
         self.distance_traveled = 0
 
-    def kiihdyta(self, speedchange):
+    def speedup(self, speedchange):
         self.current_speedkmh += int(speedchange)
         if self.current_speedkmh < 0:
             self.current_speedkmh = 0
@@ -31,7 +31,7 @@ class Competition:
     def hourpasses(self):
         global hourofrace
         for car in self.carlist:
-            car.kiihdyta(random.randint(-10, 15))
+            car.speedup(random.randint(-10, 15))
             car.travel(1)
         hourofrace += 1
 
