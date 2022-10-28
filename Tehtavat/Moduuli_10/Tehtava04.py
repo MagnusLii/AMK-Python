@@ -23,10 +23,13 @@ class Car:
         self.distance_traveled += int(timehours * math.sqrt(self.current_speedkmh ** 2))
 
 class Competition:
-    def __init__(self, racename, distance, listofcarsss):
+    def __init__(self, racename, distance, numofcars):
         self.name = racename
         self.distance = distance
-        self.carlist = listofcarsss
+        self.carlist = []
+        for i in range(numofcars):
+            self.carlist.append(Car(f"ABC-{i+1}", random.randint(100, 200)))
+
 
     def hourpasses(self):
         global hourofrace
@@ -36,7 +39,7 @@ class Competition:
         hourofrace += 1
 
     def printsit(self):
-        for i in cars:
+        for i in self.carlist:
             attributes = vars(i)
             print(", ".join("%s: %s" % item for item in attributes.items()))
         print("--------------------------------------------------------------------------------------")
@@ -46,10 +49,8 @@ class Competition:
             print(f"{car.registration_number} has won the race, the race lasted {hourofrace} hours.")
             return True
 
-cars = []
-for i in range(10):
-    cars.append(Car(f"ABC-{i+1}", random.randint(100, 200)))
-comp = Competition("Suuri romuralli", 8000, cars)
+
+comp = Competition("Suuri romuralli", 8000, 10)
 someonewon = None
 
 while not someonewon:
