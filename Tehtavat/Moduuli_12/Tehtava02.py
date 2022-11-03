@@ -1,21 +1,18 @@
 import requests  # handles API requests, requires package install.
-import json  # Handles Json formatting in this code.
 
-#keyword = input("Give city name: ")
-#tempreq = f"https://api.openweathermap.org/data/2.5/weather?q={keyword},&callback=test&appid=22fc03c762c981f61627b4bcc36273aa"
-tempreq = f"https://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=test&appid=22fc03c762c981f61627b4bcc36273aa"
-answer = requests.get(tempreq).json()
-#print(json.dumps(answer, indent=2))
+key = "22fc03c762c981f61627b4bcc36273aa"
+location = input("Gib city name: ")
+request = f"https://api.openweathermap.org/data/2.5/weather?q={location}&appid={key}&units=metric"
+answer = requests.get(request).json()
 
-# Lon Lat haku
 try:
-    answer = requests.get(tempreq)
-    if answer.status_code==200:
+    answer = requests.get(request)
+    if answer.status_code == 200:
         json_answer = answer.json()
-        print(json_answer)
-        for row in json_answer:
-            print("lol")
-            #latitude = row["lat"]
-            #longitude = row["lon"]
+        print(f'''Temperature C: {json_answer["main"]["temp"]},'''
+              f''' description: {json_answer["weather"][0]["description"]}''')
+    elif not answer:
+        print("Search returned no results.")
+
 except requests.exceptions.RequestException as e:
-    print ("Invalid request.")
+    print("Hehe... broken")
